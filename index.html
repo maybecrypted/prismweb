@@ -170,7 +170,7 @@
         }
         .btn-primary:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.6);
+            box-shadow: 0 15px 25px rgba(50, 50, 50, 0.3);
         }
         .btn-secondary {
             background-color: transparent;
@@ -627,11 +627,10 @@
                 <a href="#" onclick="showPage('download')" class="nav-link" data-page="download">Download</a>
                 <a href="#" onclick="showPage('about')" class="nav-link" data-page="about">About</a>
                 <a href="#" onclick="showPage('pricing')" class="nav-link" data-page="pricing">Pricing</a>
-                <a href="https://discord.gg/5hBYuWUd7u" target="_blank">Discord</a>
+                <a href="https://discord.gg/dRTh6c88yQ" target="_blank">Discord</a>
             </nav>
         </header>
 
-        <!-- Home Page -->
         <div id="home" class="page active">
             <section class="hero">
                 <h1>Ultimate Roblox Scripting</h1>
@@ -650,7 +649,6 @@
             </section>
         </div>
         
-        <!-- Pricing Page -->
         <div id="pricing" class="page">
             <section class="pricing-hero">
                 <h1>Key System Pricing</h1>
@@ -667,7 +665,6 @@
                     </ul>
                 </div>
 
-                <!-- 1 Week -->
                 <div class="pricing-card">
                     <div class="pricing-duration">1 Month</div>
                     <div class="pricing-price price-purple">$2.99</div>
@@ -677,7 +674,6 @@
                     </ul>
                 </div>
 
-                <!-- 1 Month - Popular -->
                 <div class="pricing-card popular">
                     <div class="pricing-duration">1 Year</div>
                     <div class="pricing-price price-purple">$7.99</div>
@@ -689,7 +685,6 @@
             </div>
         </div>
 
-        <!-- Download Page -->
         <div id="download" class="page">
             <section class="download-hero">
                 <h1>Download Prism</h1>
@@ -724,13 +719,11 @@
             </div>
         </div>
 
-        <!-- About Page -->
         <div id="about" class="page">
             <section class="about-hero">
                 <h1>About Prism</h1>
                 <p class="about-description">Prism offers a sleek, minimalistic interface built for speed and performance.</p>
             </section>
-            <!-- Stats Section -->
             <section class="stats-section">
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -751,7 +744,6 @@
                     </div>
                 </div>
             </section>
-            <!-- What Makes Us Different Section -->
             <section class="different-section">
                 <h2 class="different-title">What Makes Us Different</h2>
                 <p class="different-subtitle">Designed for fast, reliable and effortless Roblox execution</p>
@@ -793,12 +785,10 @@
 
     <script>
         function showPage(pageId) {
-            // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => {
                 page.classList.remove('active');
             });
-            // Update navigation
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -806,12 +796,10 @@
                     link.classList.add('active');
                 }
             });
-            // Show selected page
             setTimeout(() => {
                 document.getElementById(pageId).classList.add('active');
             }, 100);
         }
-        // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             showPage('home');
         });
